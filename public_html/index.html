@@ -16,7 +16,7 @@
         <div class="row">
             <div class="medium-12 columns">
                 <div class="callout">
-                    <p>Denna sidan kommer att visa upp de olika sakerna som Foundation kan ge. Delarna kommer att jämnföras med det vi kan om tex Bootstrap. </p>
+                    <p class="text-center">Denna sidan kommer att visa upp de olika sakerna som Foundation kan ge. Delarna kommer att jämnföras med det vi kan om tex Bootstrap. </p>
                 </div>
             </div>
         </div>
@@ -208,7 +208,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="medium-12">
+            <div class="medium-12 columns">
                 <form>
                     <label>
                         Ingen klass. Ensam input:
@@ -222,7 +222,106 @@
                             <option value="val4">Val 4</option>
                         </select>
                     </label>
+                    <div class="callout">
+                        <p>För att göra grupper av inputs och göra det lite snyggare använder man <code>input-group</code> i en <code>div</code> utanför.</p>
+                        <p>Sedan lägger du bara till klassen till rätt element som tex <code>input-group-button</code> och <code>input-group-field</code> som ska in på button och en input.</p>
+                        <p>Detta göra att det kan se ut såhär:</p>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-label">#</span>
+                        <input class="input-group-field" type="text" placeholder="yolo"/>
+                        <a class="input-group-button button">Knapp</a> 
+                    </div>
                 </form>
+            </div>
+        </div>
+        <!-- Divider -->
+        <div class="row">
+            <div class="divider">
+                <p class="text-center text-centering">
+                    Orbit
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="medium-12 columns">
+                <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+                    <ul class="orbit-container">
+                        <button class="orbit-previous" aria-label="previous"><span class="show-for-sr">Previous Slide</span>&#9664;</button>
+                        <button class="orbit-next" aria-label="next"><span class="show-for-sr">Next Slide</span>&#9654;</button>
+                        <li class="is-active orbit-slide">
+                            <div>
+                                <p class="text-center">En Foundation orbit är något som är liknesen till bootstraps carousel.</p>
+                                <p class="text-center">För att skapa en orbit skapar du först en <code>div</code> med detta innehållet <code>class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit</code></p>
+                                <p class="text-center">I denna <code>div</code> skapar du en <code>ul</code> med klassen <code>orbit-container</code>. Efter <code>ul</code> skapar du två knappar.</p>
+                            </div>
+                        </li>
+                        <li class="orbit-slide">
+                            <div>
+                                <p class="text-center">Dessa knappar ska innehålla en klass som heter <code>orbit-next</code> eller <code>orbit-previous</code> knapparna ska också ha en varsin <code>aria-label="next"</code> eller <code>aria-label="previous"</code></p>
+                                <p class="text-center">För att få de snygga markeringarna lägger du till en <code>span</code> med klassen <code>show-for-sr</code></p>
+                                <p class="text-center">För att skapa de olika slides skapar du en <code>li</code> med klassen <code>orbit-slide</code> och är det den första ska den också ha klassen
+                                    <code>is-active</code></p>
+                            </div>
+                        </li>
+                        <li class="orbit-slide">
+                            <div>
+                                <p class="text-center">Tillsist vill man lägga till de små knapparna därnere. Skapa en <code>nav</code> med klassen <code>orbit-bullets</code></p>
+                                <p class="text-center">I din <code>nav</code> lägger du till knappar till dina slides. Den första ska vara med klassen <code>is-active</code>. Det du behöver sen är <code>data-slide="x"</code>
+                                    x = nummret på sliden. Inne i knappen har du en <code>span</code> med klassen <code>show-for-sr</code></p>
+                            </div>
+                        </li>
+                        <li class="orbit-slide">
+                            <h1 class="text-center">Nu borde den funka :)</h1>
+                        </li>
+                        <nav class="orbit-bullets">
+                            <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
+                            <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+                            <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+                            <button data-slide="3"><span class="show-for-sr">Third slide details.</span></button>
+                        </nav>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Divider -->
+        <div class="row">
+            <div class="divider">
+                <p class="text-center text-centering">
+                    Reveal
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="medium-12 columns">
+                <div class="callout">
+                    <p>Foundation har en version till modual som heter reveal. Den är rätt lätt att använda. Det enda du behöver är en <code>div</code> med <code>class="reveal" id="valfrittID" data-reveal</code></p>
+                    <p>För att få X:ett för att tabort rutan lägg till en knapp med innehållet <code>class="close-button" data-close aria-label="Close reveal" type="button"</code> med en span på insidan <code>arian-hidden="true"</code></p>
+                </div>
+                <div class="callout">
+                    <a data-open="enfinID" class="button success expanded">En knapp till reveal</a>
+                </div>
+            </div>
+        </div>
+        <div class="reveal" id="enfinID" data-reveal>
+            <h1>Tja</h1>
+            <p>Detta är en reveal :)</p>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+                <span arian-hidden="true">X</span>
+            </button>
+        </div>
+
+        <div class="row">
+            <div class="medium-12 columns">
+                <h2 class="text-center">Skillnaderna mellan bootstrap och foundation</h2>
+                <div class="medium-6 columns">
+                    <a class="button expanded success" href="">Bootstrap</a>
+                    <p>En sida med bootstrap</p>
+                </div>
+                <div class="medium-6 columns">
+                    <a class="button expanded primary" href="">Foundation</a>
+                    <p>En sida med Foundation</p>
+                </div>
             </div>
         </div>
         <script src="js/vendor/jquery.js"></script>
